@@ -1,8 +1,19 @@
 package com.gradlemodule.convention.extensions
 
+import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.dsl.LibraryExtension
 import com.android.build.api.dsl.Packaging
 import org.gradle.api.JavaVersion
+
+internal fun ApplicationExtension.configureApplicationCompilerOptions() {
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    packaging {
+        configurePackageResources()
+    }
+}
 
 internal fun LibraryExtension.configureCompilerOptions() {
     compileOptions {

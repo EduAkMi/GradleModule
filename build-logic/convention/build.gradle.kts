@@ -10,6 +10,10 @@ dependencies {
 
 gradlePlugin {
     plugins {
+        register("application") {
+            id = "plugin.application"
+            implementationClass = "ApplicationPlugin"
+        }
         register("androidModule") {
             id = "plugin.android-module"
             implementationClass = "AndroidModulePlugin"

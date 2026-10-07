@@ -1,6 +1,7 @@
 [versions]
 build-sdk-compile = "37"
 build-sdk-min = "24"
+build-sdk-target = "37"
 agp = "9.3.3"
 coreKtx = "1.19.1"
 junit = "4.13.2"
